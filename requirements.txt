@@ -1,0 +1,6 @@
+streamlit>=1.48,<2
+torch>=2.6,<3
+transformers>=4.48,<5
+pandas>=2.2,<3
+plotly>=6,<7
+sentencepiece>=0.2,<1
