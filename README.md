@@ -91,3 +91,26 @@ Capturas tomadas en Chrome con la app local y el modelo BETO cargado.
 | Historial | [Registros de la sesión](capturas/05-historial.png) |
 
 [Guion de defensa](docs/guion_defensa.md) · [Lista de entrega](docs/checklist_entrega.md)
+
+
+## Descargar el modelo entrenado
+
+El proyecto utiliza un modelo BETO ajustado por el equipo para clasificar seis emociones en español.
+
+**[Descargar modelo BETO entrenado — Google Drive](https://drive.google.com/file/d/1PJ2wuGaI9xKKJNzX5K7n9bMgpTj75lbk/view?usp=sharing)**
+
+### Instalación del modelo
+
+1. Descarga el archivo `modelo_emociones_es.zip`.
+2. Extrae su contenido en la carpeta principal del proyecto.
+3. Comprueba que exista `modelo_emociones_es/config.json` y `modelo_emociones_es/model.safetensors`.
+4. Instala las dependencias y ejecuta Streamlit.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+El modelo no se incluye directamente en GitHub debido al tamaño de sus pesos.
+
+**Resultados del entrenamiento:** accuracy de 92,33 % y F1-macro de 90,23 % sobre 1.800 frases de prueba, según los metadatos del entrenamiento.
